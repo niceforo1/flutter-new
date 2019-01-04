@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
                     ),
                   )),
               Center(
-                child: Text('pUTO', style: TextStyle(color: Colors.white)),
+                child: Text('Flutter', style: TextStyle(color: Colors.white)),
               )
             ],
           )),
