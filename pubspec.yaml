@@ -43,6 +43,12 @@ flutter:
   assets:
     - assets/images/caduca.jpeg
     - assets/images/viajero.png
+    - assets/images/beach.jpg
+    - assets/images/florencia.jpg
+    - assets/images/forest.jpeg
+    - assets/images/lake_mountain.jpg
+    - assets/images/snow.jpeg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
 

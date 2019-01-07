@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
 import 'review_list.dart';
+import 'header_appbar.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,29 +18,37 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          appBar: AppBar(
-            title: Text('APP BAR'),
+          body: Stack(
+            children: <Widget>[
+              ListView(
+                children: <Widget>[
+                  DescriptionPlace("Bahamas", 4, descrptionDummy),
+                  ReviewList()
+                ],
+              ),
+              HeaderAppbar()
+            ],
           ),
-          body: LayoutBuilder(
-            builder:
-                (BuildContext context, BoxConstraints viewportConstraints) {
-              return SingleChildScrollView(
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(
-                    minHeight: viewportConstraints.maxHeight,
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      new DescriptionPlace("Bahamasa", 4, descrptionDummy),
-                      new ReviewList()
-                    ],
-                  ),
-                ),
-              );
-            },
-          ),
+//          body: LayoutBuilder(
+//            builder:
+//                (BuildContext context, BoxConstraints viewportConstraints) {
+//              return SingleChildScrollView(
+//                child: ConstrainedBox(
+//                  constraints: BoxConstraints(
+//                    minHeight: viewportConstraints.maxHeight,
+//                  ),
+//                  child: Column(
+//                    mainAxisSize: MainAxisSize.min,
+//                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+//                    children: <Widget>[
+//                      DescriptionPlace("Bahamas", 4, descrptionDummy),
+//                      ReviewList()
+//                    ],
+//                  ),
+//                ),
+//              );
+//            },
+//          ),
         )
 //        body: Column(
 //          children: <Widget>[
